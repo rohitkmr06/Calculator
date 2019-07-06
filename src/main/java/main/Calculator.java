@@ -1,19 +1,19 @@
 package main;
 import java.util.*; 
 
-public class Calculator {
+public class Calculator 
+{
     public static void main(String[] args)
     {
         System.out.println("Enter first and second number:");
-        Scanner inp= new Scanner(System.in);
-        int num1,num2;
-        num1 = inp.nextInt();
-        num2 = inp.nextInt();
-        int ans;
+        Scanner s= new Scanner(System.in);
+        int num1=s.nextInt();
+        int num2=s.nextInt();
         System.out.println("Enter your selection: 1 for Addition, 2 for substraction 3 for Multiplication and 4 for division:");
         int choose;
-        choose = inp.nextInt();
-        switch (choose){
+        choose = s.nextInt();
+        switch (choose)
+        {
         case 1:
             System.out.println(add( num1,num2));
             break;
@@ -26,38 +26,32 @@ public class Calculator {
         case 4:
             System.out.println(div( num1,num2));
             break;
-            default:
-                System.out.println("Illigal Operation");
-
-
+        default:
+            System.out.println("Illigal Operation");
         }
-
-
-
     }
     public static int add(int x, int y)
     {
-    	int result=0;
-//        write your code here 
-    	
+    	int result=0; 
+    	result=x+y;
         return result;
     }
     public static int sub(int x, int y)
     {
     	int result=0;
-//        write your code here
+    	result=x-y;
         return result;
     }
     public static int mult(int x, int y)
     {
     	int result=0;
-//      write your code here        
+    	result=x*y;
     	return result;
     }
     public static int div(int x, int y)
     {
     	int result=0;
-//      write your code here
+    	result=x/y;
     	return result;
     }
 
